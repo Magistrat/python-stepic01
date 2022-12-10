@@ -27,6 +27,5 @@ objects = [1, 2, 1, 2, 3] # будем считать, что одинаковы
 end = []
 for obj in objects:
     x = objects.index(obj)
-    # print(obj, x)
     end.append(x)
 print(len(set(end)))
