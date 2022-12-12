@@ -1,0 +1,23 @@
+'''
+
+В первой строке дано три числа, соответствующие некоторой дате date -- год, месяц и день.
+Во второй строке дано одно число days -- число дней.
+
+Вычислите и выведите год, месяц и день даты, которая наступит, когда с момента исходной даты date пройдет число дней, равное days.
+
+Примечание:
+Для решения этой задачи используйте стандартный модуль datetime.
+Вам будут полезны класс datetime.date для хранения даты и класс datetime.timedelta﻿ для прибавления дней к дате.
+
+'''
+
+from datetime import timedelta
+from datetime import datetime
+
+start_time = input()
+dayss = int(input())
+
+x = datetime.strptime(start_time, "%Y %m %d")
+y = x + timedelta(days = dayss)
+y = datetime.strftime(y, "%Y %-m %-d")
+print(y)
