@@ -46,7 +46,7 @@ def req_art(key):
     r = requests.get(link + key, headers=headers)
     j = r.json()
     year = j['birthday']
-    name = j['name']
+    name = j['sortable_name']
     dict_make(name, year)
     year_ar.append(year)
 
