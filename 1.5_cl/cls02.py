@@ -39,10 +39,11 @@ class Buffer:
         print(count)
 
     def add(self, *a):
-        self.buff.extend(a)
-        if len(self.buff) == 5:
-            self.__sum(self.buff)
-            self.__init__()
+        for i in a:
+            self.buff.append(i)
+            if len(self.buff) == 5:
+                self.__sum(self.buff)
+                self.__init__()
 
     def get_current_part(self):
         return self.buff
